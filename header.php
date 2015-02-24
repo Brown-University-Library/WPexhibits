@@ -4,12 +4,12 @@
  *
  *
  * @file           header.php
- * @package        Responsive
- * @author         Emil Uzelac
+ * @package        exhibits-general
+ * @author         Emil Uzelac and Kerri Hicks
  * @copyright      2003 - 2014 CyberChimps
  * @license        license.txt
  * @version        Release: 1.3
- * @filesource     wp-content/themes/responsive/header.php
+ * @filesource     wp-content/themes/exhibits-general/header.php
  * @link           http://codex.wordpress.org/Theme_Development#Document_Head_.28header.php.29
  * @since          available since Release 1.0
  */
@@ -57,33 +57,24 @@ if ( !defined( 'ABSPATH' ) ) {
 
 		<?php responsive_header_top(); // before header content hook ?>
 
-		<?php if ( has_nav_menu( 'top-menu', 'responsive' ) ) {
-			wp_nav_menu( array(
-				'container'      => '',
-				'fallback_cb'    => false,
-				'menu_class'     => 'top-menu',
-				'theme_location' => 'top-menu'
-			) );
-		} ?>
+
+        <?php 
+        // this grabs the top menu links, maintained as an HTML file on worf
+           $top_menu = file_get_contents('http://library.brown.edu/includes/wordpress_exhibits_header_links.html') ; 
+           echo $top_menu ; 
+        ?>		
 
 		<?php responsive_in_header(); // header hook ?>
 
-		<?php if ( get_header_image() != '' ) : ?>
+        <div id="logo"> 
 
-			<div id="logo">
-				<a href="<?php echo home_url( '/' ); ?>"><img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
-			</div><!-- end of #logo -->
+        <a href="http://www.brown.edu"><img src="http://library.brown.edu/images/header_shield.png" style="height : 67px ; margin-left : 10px ; margin-right : 10px ; float : left ; " alt="Brown University Homepage" title="Brown University Homepage" /></a> 		
+<!-- 
+        <a href="http://library.brown.edu/" style="text-decoration : none ; color : #fff ; font-size : 20pt ; text-transform : uppercase ; vertical-align : 70% ; font-family : 'MinionPro' ; ">Brown University <strong>Library</strong></a>
+ -->
+		<a href="http://library.brown.edu/"><img style="height : 27px ; margin-top : 22px ; " class="wide" src="http://library.brown.edu/images/Brown_University_Library_header_text.png" alt="Brown University Library" /><img style="height : 27px ; margin-top : 22px ; " class="narrow" src="http://library.brown.edu/images/Brown_Library_header_text.png" alt="Brown  Library" /></a> 
 
-		<?php endif; // header image was removed ?>
-
-		<?php if ( !get_header_image() ) : ?>
-
-			<div id="logo">
-				<span class="site-name"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-				<span class="site-description"><?php bloginfo( 'description' ); ?></span>
-			</div><!-- end of #logo -->
-
-		<?php endif; // header image was removed (again) ?>
+        </div><!-- end of #logo -->
 
 		<?php get_sidebar( 'top' ); ?>
 		<?php wp_nav_menu( array(
@@ -93,13 +84,13 @@ if ( !defined( 'ABSPATH' ) ) {
 			'theme_location'  => 'header-menu'
 		) ); ?>
 
-		<?php if ( has_nav_menu( 'sub-header-menu', 'responsive' ) ) {
-			wp_nav_menu( array(
-				'container'      => '',
-				'menu_class'     => 'sub-header-menu',
-				'theme_location' => 'sub-header-menu'
-			) );
-		} ?>
+		<?php //if ( has_nav_menu( 'sub-header-menu', 'responsive' ) ) {
+			//wp_nav_menu( array(
+			//	'container'      => '',
+			//	'menu_class'     => 'sub-header-menu',
+			//	'theme_location' => 'sub-header-menu'
+			//) ); 
+		//} ?>
 
 		<?php responsive_header_bottom(); // after header content hook ?>
 

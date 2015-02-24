@@ -9,12 +9,12 @@ if ( !defined( 'ABSPATH' ) ) {
  * Loop Header Template-Part File
  *
  * @file           loop-header.php
- * @package        Responsive
- * @author         Emil Uzelac
+ * @package        exhibits-general
+ * @author         Emil Uzelac and Kerri Hicks
  * @copyright      2003 - 2014 CyberChimps
  * @license        license.txt
  * @version        Release: 1.1.0
- * @filesource     wp-content/themes/responsive/loop-header.php
+ * @filesource     wp-content/themes/exhibits-general/loop-header.php
  * @link           http://codex.wordpress.org/Templates
  * @since          available since Release 1.0
  */

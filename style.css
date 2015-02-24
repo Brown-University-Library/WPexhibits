@@ -6,3 +6,206 @@
  Version:      1.0.0
  Text Domain:  exhibits-general
 */
+
+body {
+    background-color : #fff ;
+}
+
+/* Customizations for the very-top menu, in header.php */
+ul.top-menu { 
+    float : none ; 
+    margin : 0px ; 
+    padding : 0px ;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    text-align : center ;
+}
+
+ul.top-menu li a {
+    padding-left : 1.8vw !important ; 
+    padding-right : 1.8vw !important ; 
+}
+
+/* Removes extra spacing at the top of the page in header.php */
+.skip-container {
+    padding : 0px ; 
+}
+
+/* Overrides the 960px max width, for full screen width goodness in header.php */
+#container {
+    max-width: 100% ;
+    padding : 0px 0px ; 
+}
+
+/* This is the top area of the header, the brown bar with red stripe, containing the shield and Brown University Library text in header.php */
+#logo {
+    padding : 0px ;
+    width : 100% ;
+    margin : 0px 0px 0px 0px ; 
+    height : 67px ; 
+    background: -webkit-linear-gradient(top, #bf0017 7%, #280907 0%) ; 
+    background: -moz-linear-gradient(top, #bf0017 7%, #280907 0%) ; 
+    background: -o-linear-gradient(top, #bf0017 7%, #280907 0%) ; 
+    background: -ms-linear-gradient(top, #bf0017 7%, #280907 0%) ;           
+}
+
+/* Styling site-wide project menu, in header.php */
+.menu {
+    background-image : none ;
+    background-color : #ccc ;
+    height : 25px ; 
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+
+.menu a {
+    height : 25px ;
+    color : #333 ;
+    text-shadow : none ; 
+    line-height : inherit ;
+    padding-top : .15em ;
+}
+
+.menu .current-menu-item a, .menu .current_page_item a {
+    background-color: #ccc;
+    height : 23px ;
+    padding-top : .15em ; 
+    padding-bottom : 0px ;
+}
+
+/* styling for site-wide project menu in responsive mode, in header.php */
+.js .main-nav, .js .main-nav .menu li.current_page_item, .js .menu .current-menu-item a, .js .menu .current_page_item a, .js .main-nav #responsive_current_menu_item {
+    background-color: #ccc;
+    background-image: none ; 
+    color : #333 ;
+}
+
+/* styling for home page splash screen at top, in home-page.php */
+#wrapper, #home_page_hero {
+    margin : 0px ;
+    padding : 0px ; 
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px; 
+}
+
+div#home_page_hero {
+    margin-top : 0px !important ; 
+    width : 100% ; 
+    min-height : 250px !important ; 
+    background-size: cover ;
+}
+
+#home_page_hero .widget-wrapper,  #home_page_hero .widget-wrapper .widget-title h3 {
+    background-color : transparent ; 
+    border : 0px solid ; 
+    border-radius : 0px ; 
+    text-align : center ; 
+    margin : 0px ; 
+}
+
+/* For some reason, the theme hides the sub header menu in responsive mode. This makes it visible again. */
+.js .sub-header-menu {
+    display : block ;
+}
+
+ul#menu-a-sub-header-menu {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+
+#content-full {
+    margin : 0px 0px 0px 20px ; 
+    width : 95% ; 
+}
+
+.page-template-home-page h1 {
+    display : none ; 
+}
+
+/* footer styles from main library web site */
+#footer {
+    clear: both;
+    max-width: 100% ;
+    margin: 0px auto ;
+    padding: 0px;
+}
+
+#footerw {
+    margin: auto;
+    clear: both;
+    width: 100%;
+    min-height: 140px;
+    background: #2b0b07;
+    padding: 1px 0px 0px 0px ;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    color: #ad8d89;
+    vertical-align: baseline;
+    background: -webkit-linear-gradient(top, #bf0017 3%, #280907 0%) ; 
+    background: -moz-linear-gradient(top, #bf0017 3%, #280907 0%) ; 
+    background: -o-linear-gradient(top, #bf0017 3%, #280907 0%) ; 
+    background: -ms-linear-gradient(top, #bf0017 3%, #280907 0%) ;          
+}
+
+#footer_contents {
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 4.5%;
+    padding-left: 4.5%;
+}
+
+#footer_contents .social_media_links {
+    position: relative;
+    float: right;
+    text-align: right;
+    height: auto;
+    width: auto;
+    margin : 0px 10px 30px 120px ; 
+}
+
+#footer_contents .social_media_links a {
+    position: relative;
+    float: right;
+    width: auto;
+    border-bottom: 0;
+    border-bottom: none;
+    border: 0;
+    border: none;
+    text-decoration: none;
+}
+
+#footer a {
+    font-size: 1.0em;
+    color: #efcc00;
+    border-bottom: 1px dotted ;
+}
+
+#footer, #footer a {
+    font-weight : 700 ; 
+}
+
+#logo img.narrow {
+        display : none ;
+    }
+    
+@media screen and (max-width: 650px) {
+    #logo img.wide {
+        display : none ;
+    }
+    #logo img.narrow {
+        display : inline ;
+        float : left ; 
+    }
+}
