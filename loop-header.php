@@ -38,7 +38,7 @@ if ( is_category() || is_tag() || is_author() || is_date() ) {
 		elseif ( is_year() ) :
 			printf( __( 'Yearly Archives: %s', 'responsive' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 		else :
-			_e( 'Blog Archives', 'responsive' );
+			_e( 'Category listing', 'responsive' );
 		endif;
 		?>
 	</h6>

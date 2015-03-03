@@ -40,7 +40,8 @@ if ( !defined( 'ABSPATH' ) ) {
 
 		<link rel="profile" href="http://gmpg.org/xfn/11"/>
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
-
+        <link href='http://fonts.googleapis.com/css?family=Stalemate|Dancing+Script|Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		
 		<?php wp_head(); ?>
 	</head>
 
@@ -68,21 +69,43 @@ if ( !defined( 'ABSPATH' ) ) {
 
         <div id="logo"> 
 
-        <a href="http://www.brown.edu"><img src="http://library.brown.edu/images/header_shield.png" style="height : 67px ; margin-left : 10px ; margin-right : 10px ; float : left ; " alt="Brown University Homepage" title="Brown University Homepage" /></a> 		
-<!-- 
-        <a href="http://library.brown.edu/" style="text-decoration : none ; color : #fff ; font-size : 20pt ; text-transform : uppercase ; vertical-align : 70% ; font-family : 'MinionPro' ; ">Brown University <strong>Library</strong></a>
- -->
-		<a href="http://library.brown.edu/"><img style="height : 27px ; margin-top : 22px ; " class="wide" src="http://library.brown.edu/images/Brown_University_Library_header_text.png" alt="Brown University Library" /><img style="height : 27px ; margin-top : 22px ; " class="narrow" src="http://library.brown.edu/images/Brown_Library_header_text.png" alt="Brown  Library" /></a> 
+            <a href="http://www.brown.edu"><img src="http://library.brown.edu/images/header_shield.png" style="height : 67px ; margin-left : 10px ; margin-right : 10px ; float : left ; " alt="Brown University Homepage" title="Brown University Homepage" /></a> 		
+    <!-- 
+            <a href="http://library.brown.edu/" style="text-decoration : none ; color : #fff ; font-size : 20pt ; text-transform : uppercase ; vertical-align : 70% ; font-family : 'MinionPro' ; ">Brown University <strong>Library</strong></a>
+     -->
+            <a href="http://library.brown.edu/"><img style="height : 27px ; margin-top : 22px ; " class="wide" src="http://library.brown.edu/images/Brown_University_Library_header_text.png" alt="Brown University Library" /><img style="height : 27px ; margin-top : 22px ; " class="narrow" src="http://library.brown.edu/images/Brown_Library_header_text.png" alt="Brown  Library" /></a> 
+
+            <form accept-charset="UTF-8" action="https://search.library.brown.edu/" method="get" style="float : right ; margin-top : 18px ; margin-right : 5% ; width : 40% ; ">
+                <div style="display:none">
+                    <input name="utf8" type="hidden" value="&#x2713;" />
+                </div>
+                <div>
+                    <label for="q" style="position : absolute ; width : 1px ; height : 1px ; margin : -1px ; padding : 0 ; overflow : hidden ; clip: rect(0, 0, 0, 0) ; border: 0 ;" >Enter keywords to search library resources</label>
+                
+                    <input id="q" name="q" placeholder="Enter keywords to search library resources" type="text" style="font-size : .85em ; font-family : Source Sans Pro ; border-radius : 0px ; padding : 10px ; border : 0px ; height : 33px ; margin-top : -1px ; margin-right : -2px ; width : 75% ; color : #333 !important ; " />
+
+                    <span class="input-group-btn">
+                    
+                        <button type="submit" style="background-color : #d58100 ; border-color : #d58100 ; margin-left: -2px ; position: relative ; box-sizing: border-box ; display : inline-block ; margin-bottom : 0 ; font-weight : normal ; text-align : center ; vertical-align : middle ; touch-action : manipulation ; cursor : pointer ; background-image : none ; border: 1px solid transparent; white-space : nowrap ; padding : 6px 12px ; font-size : 14px ; line-height : 1.42857143 ; border-radius : 4px ; border-bottom-left-radius : 0 ; border-top-left-radius : 0 ; -webkit-user-select : none ; color : #fff ; -webkit-appearance: button ; font-family : Source Sans Pro ; font-weight : bold ; " id="search">
+                    
+                            <span style="font-weight : bold ; ">Search</span>
+                    
+                            <span class="glyphicon glyphicon-search"></span>
+ 
+                        </button>
+                    </span>
+                </div>
+            </form>
 
         </div><!-- end of #logo -->
 
-		<?php get_sidebar( 'top' ); ?>
-		<?php wp_nav_menu( array(
-			'container'       => 'div',
-			'container_class' => 'main-nav',
-			'fallback_cb'     => 'responsive_fallback_menu',
-			'theme_location'  => 'header-menu'
-		) ); ?>
+		<?php //get_sidebar( 'top' ); ?>
+		<?php //wp_nav_menu( array(
+			//'container'       => 'div',
+			//'container_class' => 'main-nav',
+			//'fallback_cb'     => 'responsive_fallback_menu',
+			//'theme_location'  => 'header-menu'
+		//) ); ?>
 
 		<?php //if ( has_nav_menu( 'sub-header-menu', 'responsive' ) ) {
 			//wp_nav_menu( array(
@@ -91,6 +114,10 @@ if ( !defined( 'ABSPATH' ) ) {
 			//	'theme_location' => 'sub-header-menu'
 			//) ); 
 		//} ?>
+		
+		<div id="exhibits_bar">
+		    <a href="http://library.brown.edu/exhibits/">Exhibits</a>: <a href="<?php echo home_url( '/' ); ?>"><?php echo bloginfo( 'name' ); ?></a>
+		</div>
 
 		<?php responsive_header_bottom(); // after header content hook ?>
 

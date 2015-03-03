@@ -9,6 +9,19 @@
 
 body {
     background-color : #fff ;
+    font-family : Source Sans Pro ; 
+    font-size : 1em ; 
+    color : #333 ; 
+}
+
+a {
+    text-decoration : underline ; 
+    color : #FF498D ; 
+}
+
+a:hover {
+    color : #666 ;
+    text-decoration : underline ;
 }
 
 /* Customizations for the very-top menu, in header.php */
@@ -53,37 +66,30 @@ ul.top-menu li a {
 }
 
 /* Styling site-wide project menu, in header.php */
-.menu {
-    background-image : none ;
-    background-color : #ccc ;
-    height : 25px ; 
-    -webkit-margin-before: 0em;
-    -webkit-margin-after: 0em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 0px;
+#exhibits_bar {
+    background-color : #FF85AE ;
+    padding : 0px 10px ; 
 }
 
-.menu a {
-    height : 25px ;
-    color : #333 ;
-    text-shadow : none ; 
-    line-height : inherit ;
-    padding-top : .15em ;
+#exhibits_bar a {
+    font-size : .9em ;
+    font-weight : bold ; 
+    color : #333 ; 
+    text-decoration : none ;
 }
 
-.menu .current-menu-item a, .menu .current_page_item a {
-    background-color: #ccc;
-    height : 23px ;
-    padding-top : .15em ; 
-    padding-bottom : 0px ;
-}
-
-/* styling for site-wide project menu in responsive mode, in header.php */
-.js .main-nav, .js .main-nav .menu li.current_page_item, .js .menu .current-menu-item a, .js .menu .current_page_item a, .js .main-nav #responsive_current_menu_item {
-    background-color: #ccc;
-    background-image: none ; 
-    color : #333 ;
+#logo img.narrow {
+        display : none ;
+    }
+    
+@media screen and (max-width: 1000px) {
+    #logo img.wide {
+        display : none ;
+    }
+    #logo img.narrow {
+        display : inline ;
+        float : left ; 
+    }
 }
 
 /* styling for home page splash screen at top, in home-page.php */
@@ -110,7 +116,7 @@ div#home_page_hero {
     margin : 0px ; 
 }
 
-/* For some reason, the theme hides the sub header menu in responsive mode. This makes it visible again. */
+/* By default, the theme hides the sub header menu in responsive mode. This makes it visible again. */
 .js .sub-header-menu {
     display : block ;
 }
@@ -121,6 +127,18 @@ ul#menu-a-sub-header-menu {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     -webkit-padding-start: 0px;
+}
+
+ul#menu-a-sub-header-menu li a {
+    font-size : .9em ; 
+}
+
+ul#menu-a-sub-header-menu li a:hover {
+    color : #FF498D ;
+}
+
+ul#menu-a-sub-header-menu li:first-child a {
+    font-weight : bold ; 
 }
 
 #content-full {
@@ -196,16 +214,138 @@ ul#menu-a-sub-header-menu {
     font-weight : 700 ; 
 }
 
-#logo img.narrow {
-        display : none ;
-    }
-    
-@media screen and (max-width: 650px) {
-    #logo img.wide {
-        display : none ;
-    }
-    #logo img.narrow {
-        display : inline ;
-        float : left ; 
-    }
+div.images {
+    clear : both ;
+}
+
+div.image {
+    float : left ;
+}
+
+.callout {
+    color : #FF498D ;
+    font-family: 'Dancing Script', cursive;
+    font-size : 1.3em ; 
+    font-weight : 700 ; 
+    line-height : 2 ;
+    width : 40% ; 
+    margin : -40px 0px 20px 20px ; 
+    border-top : 3px solid #FF85AE ; 
+    border-bottom : 3px solid #FF85AE ; 
+    float : right;
+    text-align : center ; 
+}
+
+/* 
+.callout p:first-child:before {
+display: block;
+content: "\201C";
+font-size: 160px;
+left: -70px;
+top: 70px;
+position: relative;
+color: #FF498D ;
+font-family : Georgia ; 
+}
+ */
+
+.callout p:first-child {
+    margin-top : 10px ; 
+}
+
+.callout .quotation_mark {
+    font-family : Georgia ;
+    font-size : 5em ; 
+}
+
+.callout p {
+    margin-left : 30px ; 
+}
+
+.callout .attribution {
+    font-size : .65em ; 
+    line-height : 1 ; 
+    color : #666 ; 
+    font-family : Helvetica ;
+    font-weight : normal ; }
+
+.callout .attribution a {
+    color : #666 ;
+    border-bottom : 0px dotted ; 
+}
+
+.post-meta {
+    display : none ; 
+}
+
+.navigation {
+    display : none ;
+}
+
+/* sets width on category pages to 100%.  */
+.category .col-620 {
+    width : 100% ; 
+}
+
+.category .post-data {
+    display : none ; 
+}
+
+.category div.post {
+    clear : both ; 
+    margin-bottom : 10px ; 
+    border-top : 1px solid #ccc ;
+}
+
+/* styling for catlist plugin */
+.catlist {
+    clear : both ;
+}
+ 
+.catlist li {
+    list-style-type : none ; 
+    border : 1px solid #ccc ;
+    margin : 10px ; 
+    width : 60% ; 
+    padding : 10px ; 
+    overflow: hidden ;
+}
+.catlist li a:first-child {
+    display : block ;
+    clear : both ; 
+    margin-bottom : 10px ;
+    font-weight : bold ; 
+    font-size : 1.2em ; 
+}
+.catlist li img {
+    float : right ;
+    margin : 20px ; 
+}
+
+.catlist li a:last-child {
+    font-size : .8em ;
+    clear : both ; 
+    display : block ;
+    text-align : right ; 
+}
+
+/* 
+end catlist styles
+ */
+
+img .cat_thumb {
+    margin-left : 60px ; 
+}
+
+#content-archive {
+    margin : 0px 20px ; 
+}
+
+.hangingindent {
+    text-indent: -2em;
+    margin-left: 2em;
+}
+
+.logo_gallery img {
+    margin-right : 6vw !important ; 
 }
